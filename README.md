@@ -2,15 +2,15 @@
 js 原型链 
 
 
-   Pres.prototype.lasname="张三";
-       function Pres(){
+      Pres.prototype.lasname="张三";
+          function Pres(){
+          }
+       var pres=new Pres()
+       Koo.prototype=pres;
+       function Koo(){
+         this.name="李四"
        }
-    var pres=new Pres()
-    Koo.prototype=pres;
-    function Koo(){
-    	this.name="李四"
-    }
-    var koo=new Koo()
+       var koo=new Koo()
     
     Son.prototype=koo;
     function Son(){
@@ -18,7 +18,6 @@ js 原型链
     }
     
      var son=new Son()
-       
         son.name   //李四
         son.names  //王五
         son.lasname  //张三
